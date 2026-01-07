@@ -1,27 +1,33 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function RSVP() {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    attendance: '',
-    message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
+    name: "",
+    phone: "",
+    email: "",
+    attendance: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setSubmitted(true);
     setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: '', phone: '', email: '', attendance: '', message: '' })
-    }, 3000)
-  }
+      setSubmitted(false);
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        attendance: "",
+        message: "",
+      });
+    }, 3000);
+  };
 
   return (
     <motion.div
@@ -64,9 +70,7 @@ export default function RSVP() {
             animate={{ scale: 1, opacity: 1 }}
           >
             <div className="text-6xl mb-4">✅</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              धन्यवाद!
-            </h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">धन्यवाद!</h3>
             <p className="text-gray-700 font-medium">
               आपली प्रतिक्रिया नोंदवली गेली आहे
             </p>
@@ -81,7 +85,9 @@ export default function RSVP() {
                 type="text"
                 required
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all"
                 placeholder="आपले नाव प्रविष्ट करा"
               />
@@ -95,7 +101,9 @@ export default function RSVP() {
                 type="tel"
                 required
                 value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all"
                 placeholder="आपला मोबाइल नंबर"
               />
@@ -108,7 +116,9 @@ export default function RSVP() {
               <input
                 type="email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all"
                 placeholder="आपला ईमेल (पर्यायी)"
               />
@@ -121,7 +131,9 @@ export default function RSVP() {
               <select
                 required
                 value={formData.attendance}
-                onChange={(e) => setFormData({ ...formData, attendance: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, attendance: e.target.value })
+                }
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-200 text-gray-900 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all"
               >
                 <option value="" className="bg-white text-gray-900">
@@ -142,7 +154,9 @@ export default function RSVP() {
               </label>
               <textarea
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 rows={4}
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all resize-none"
                 placeholder="आपला संदेश (पर्यायी)"
@@ -161,5 +175,5 @@ export default function RSVP() {
         )}
       </motion.div>
     </motion.div>
-  )
+  );
 }

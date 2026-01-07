@@ -101,7 +101,7 @@ export default function InvitationCard() {
                   {/* Family Information */}
                   <div className="text-center mt-1">
                     <p className="text-xs md:text-sm text-gray-700 font-semibold mb-0.5">
-                      पुत्र
+                      चिरंजीव
                     </p>
                     <p className="text-xs text-gray-600 font-medium">
                       श्री. ईश्वर गणपती निखाडे
@@ -167,7 +167,7 @@ export default function InvitationCard() {
                       कै. शंकर माथुलकर
                     </p>
                     <p className="text-xs text-gray-600 font-medium">
-                    श्रीमती. पद्मा शंकर माथुलकर
+                      श्रीमती. पद्मा शंकर माथुलकर
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
                       रा. सरकार नगर, तुकूम, चंद्रपूर
@@ -330,9 +330,11 @@ export default function InvitationCard() {
                     </p>
                   </div>
                   <p className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 leading-tight">
-                    दुपार २:०० वाजता
+                    दुपारी २:०० वाजता
                   </p>
-                  <p className="text-xs md:text-sm text-gray-600 mt-0.5 md:mt-1">दुपार</p>
+                  {/* <p className="text-xs md:text-sm text-gray-600 mt-0.5 md:mt-1">
+                   दुपार
+                 </p> */}
                 </motion.div>
 
                 <motion.div
@@ -342,7 +344,9 @@ export default function InvitationCard() {
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
                   <div className="flex items-center gap-2 md:gap-3 mb-1.5 md:mb-2">
-                    <span className="text-xl md:text-2xl flex-shrink-0">📍</span>
+                    <span className="text-xl md:text-2xl flex-shrink-0">
+                      📍
+                    </span>
                     <p className="text-xs md:text-sm font-semibold text-gold-700 uppercase tracking-wide whitespace-nowrap">
                       ठिकाण
                     </p>
@@ -362,7 +366,7 @@ export default function InvitationCard() {
               </div>
 
               {/* Gallery Section */}
-              <motion.div
+              {/* <motion.div
                 className="w-full max-w-sm mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -404,7 +408,7 @@ export default function InvitationCard() {
                     </motion.div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               {/* Decorative bottom */}
               <motion.div

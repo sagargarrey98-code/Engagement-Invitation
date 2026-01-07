@@ -22,22 +22,20 @@ export default function Header() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-2xl opacity-40" />
           <div className="relative w-full h-full flex items-center justify-center">
             <Image
-              src="https://png.pngtree.com/png-vector/20250519/ourlarge/pngtree-cartoon-ganesha-illustration-png-image_16316817.png"
+              src="/asset/ganesh.png"
               alt="Ganesh"
               width={144}
               height={144}
-              className="w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-lg"
+              className="w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-lg rounded-full"
               unoptimized
               priority
             />
-         
           </div>
-        
         </div>
       </motion.div>
 
-      <span  className="text-lg md:text-xl text-gray-700 font-medium">
-            || ॐ गं गणपतये नमः ||
+      <span className="text-lg md:text-xl text-gray-700 font-medium">
+        || ॐ गं गणपतये नमः ||
       </span>
       <motion.h1
         className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 gradient-text"
