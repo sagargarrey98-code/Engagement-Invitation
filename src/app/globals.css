@@ -225,7 +225,12 @@ body {
  display: none;  /* Chrome, Safari and Opera */
 }
 
+.text-3xl{
+      line-height: 4.5rem;
+}
 
-
-
+.py-16 {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
 
